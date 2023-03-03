@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/PublicPixel-z84yD.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sounds/Gunc.wav" type="AudioStream" id=2]
+[ext_resource path="res://scripts/Player_Selector.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14, 19 )
+
+[node name="Player_Selector" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Playas" type="Label" parent="Players"]
+margin_left = -148.0
+margin_top = 37.0
+margin_right = 119.0
+margin_bottom = 80.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 1 )
+text = "Number of Players"
+
+[node name="Playernum" type="Label" parent="Players"]
+modulate = Color( 1, 0.996078, 0.996078, 1 )
+margin_left = -37.0
+margin_top = 85.0
+margin_right = 230.0
+margin_bottom = 128.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 1 )
+text = "2"
+
+[node name="LeftnRight" type="Node2D" parent="Players"]
+position = Vector2( -31, 96 )
+scale = Vector2( 1.1, 1.2 )
+
+[node name="Right" type="Label" parent="Players/LeftnRight"]
+margin_left = 86.4545
+margin_top = -20.0
+margin_right = 110.454
+margin_bottom = 8.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="Left" type="Label" parent="Players/LeftnRight"]
+margin_left = -86.4545
+margin_top = -20.0
+margin_right = -57.4545
+margin_bottom = 8.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 2 )
+text = "<"
+
+[node name="Left" type="Area2D" parent="Players"]
+position = Vector2( -117, 96 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Players/Left"]
+position = Vector2( 1, 0 )
+shape = SubResource( 3 )
+
+[node name="Right" type="Area2D" parent="Players"]
+position = Vector2( 70, 96 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Players/Right"]
+position = Vector2( 1, 0 )
+shape = SubResource( 3 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 12.0
+pitch_scale = 2.0
+
+[connection signal="input_event" from="Players/Left" to="." method="_on_Left_input_event"]
+[connection signal="input_event" from="Players/Right" to="." method="_on_Right_input_event"]

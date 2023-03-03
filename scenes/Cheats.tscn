@@ -1,0 +1,344 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://sprites/bgcool.jpg" type="Texture" id=1]
+[ext_resource path="res://sprites/Grass.png" type="Texture" id=2]
+[ext_resource path="res://sprites/cloud.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Cheats.gd" type="Script" id=4]
+[ext_resource path="res://fonts/PublicPixel-z84yD.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scenes/CheatContainer.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Gradient" id=28]
+colors = PoolColorArray( 0.901961, 0.486275, 0, 1, 0.368627, 0, 0.411765, 1 )
+
+[sub_resource type="GradientTexture" id=29]
+gradient = SubResource( 28 )
+
+[sub_resource type="Animation" id=30]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Grass:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.880001 ), Vector2( 1, 0.95 ), Vector2( 1, 0.880001 ) ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Grass:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.880001 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 327, 30.5 )
+
+[sub_resource type="Animation" id=33]
+resource_name = "Blowin"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Grass:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.880001 ), Vector2( 1, 0.95 ), Vector2( 1, 0.880001 ) ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Grass:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.880001 ) ]
+}
+
+[sub_resource type="Curve" id=35]
+_data = [ Vector2( 0.00699301, 0.990909 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0181818 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=36]
+colors = PoolColorArray( 1, 0.654902, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=38]
+size = 15
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 10
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Cheats" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="TitBackground" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="TitBackground"]
+modulate = Color( 0.72549, 0.72549, 0.72549, 1 )
+
+[node name="BG" type="Node2D" parent="TitBackground/Background"]
+
+[node name="Baground" type="Node2D" parent="TitBackground/Background/BG"]
+z_index = -100
+
+[node name="TextureRect2" type="TextureRect" parent="TitBackground/Background/BG/Baground"]
+margin_left = 626.0
+margin_top = -2.0
+margin_right = 1203.0
+margin_bottom = 637.0
+rect_rotation = 90.0
+mouse_filter = 2
+texture = SubResource( 29 )
+expand = true
+flip_h = true
+
+[node name="Grass" type="Node2D" parent="TitBackground/Background/BG"]
+modulate = Color( 0.639216, 0.639216, 0.639216, 1 )
+position = Vector2( 233, 518 )
+scale = Vector2( 1, 0.880001 )
+
+[node name="Sprite6" type="Sprite" parent="TitBackground/Background/BG/Grass"]
+position = Vector2( 340, -74.9999 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="TitBackground/Background/BG/Grass"]
+position = Vector2( 196, -99.9999 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="TitBackground/Background/BG/Grass"]
+position = Vector2( 54, -105.682 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="TitBackground/Background/BG/Grass"]
+position = Vector2( -74, -73.8635 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="TitBackground/Background/BG/Grass"]
+position = Vector2( -217, -37.4999 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="TitBackground/Background/BG"]
+modulate = Color( 1, 0.917647, 0.419608, 1 )
+position = Vector2( 297, 690 )
+scale = Vector2( 1.07642, 0.789588 )
+texture = ExtResource( 1 )
+
+[node name="Grassmations" type="AnimationPlayer" parent="TitBackground/Background/BG"]
+autoplay = "Blowin"
+anims/Blowin = SubResource( 30 )
+anims/RESET = SubResource( 31 )
+
+[node name="Floor" type="StaticBody2D" parent="TitBackground/Background"]
+position = Vector2( 27, 576 )
+
+[node name="Sprite" type="Sprite" parent="TitBackground/Background/Floor"]
+modulate = Color( 0.709804, 0.545098, 0.223529, 1 )
+position = Vector2( 270, 171 )
+scale = Vector2( 1.07642, 0.789588 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TitBackground/Background/Floor"]
+position = Vector2( 270, 0.5 )
+shape = SubResource( 32 )
+
+[node name="FG" type="Node2D" parent="TitBackground/Background"]
+modulate = Color( 0.694118, 0.694118, 0.694118, 1 )
+position = Vector2( 6, 52 )
+z_index = 1001
+
+[node name="Grass" type="Node2D" parent="TitBackground/Background/FG"]
+modulate = Color( 0.639216, 0.639216, 0.639216, 1 )
+position = Vector2( 226, 688 )
+scale = Vector2( 1, 0.880001 )
+
+[node name="Sprite6" type="Sprite" parent="TitBackground/Background/FG/Grass"]
+position = Vector2( 335, -97.7271 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="TitBackground/Background/FG/Grass"]
+position = Vector2( 196, -99.9999 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="TitBackground/Background/FG/Grass"]
+position = Vector2( 54, -105.682 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="TitBackground/Background/FG/Grass"]
+position = Vector2( -74, -87.4999 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="TitBackground/Background/FG/Grass"]
+position = Vector2( -213, -88.6363 )
+scale = Vector2( 3.22, 4.83846 )
+texture = ExtResource( 2 )
+
+[node name="Grassmations" type="AnimationPlayer" parent="TitBackground/Background/FG"]
+autoplay = "Blowin"
+anims/Blowin = SubResource( 33 )
+anims/RESET = SubResource( 34 )
+
+[node name="Clouds" type="CPUParticles2D" parent="TitBackground/Background"]
+modulate = Color( 0.901961, 0.901961, 0.901961, 1 )
+position = Vector2( 831, 105 )
+amount = 3
+lifetime = 10.0
+preprocess = 7.0
+texture = ExtResource( 3 )
+emission_shape = 1
+emission_sphere_radius = 60.57
+direction = Vector2( -1, 0 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0
+scale_amount = 3.5
+scale_amount_random = 0.5
+
+[node name="Fires" type="Node2D" parent="TitBackground"]
+visible = false
+
+[node name="Fire" type="CPUParticles2D" parent="TitBackground/Fires"]
+position = Vector2( 42, 457 )
+scale = Vector2( 1.2, 1.4 )
+z_index = -1
+amount = 300
+lifetime = 2.0
+preprocess = 1.0
+emission_shape = 1
+emission_sphere_radius = 35.0
+gravity = Vector2( 0, -98 )
+angular_velocity = 468.99
+angular_velocity_random = 1.0
+scale_amount = 10.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 35 )
+color_ramp = SubResource( 36 )
+
+[node name="Fire2" type="CPUParticles2D" parent="TitBackground/Fires"]
+position = Vector2( 537, 506 )
+scale = Vector2( 1.2, 1.4 )
+z_index = -1
+amount = 300
+lifetime = 2.0
+preprocess = 1.0
+emission_shape = 1
+emission_sphere_radius = 35.0
+gravity = Vector2( 0, -98 )
+angular_velocity = 468.99
+angular_velocity_random = 1.0
+scale_amount = 10.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 35 )
+color_ramp = SubResource( 36 )
+
+[node name="Fire3" type="CPUParticles2D" parent="TitBackground/Fires"]
+position = Vector2( 237, 414 )
+scale = Vector2( 1.2, 1.4 )
+z_index = -1
+amount = 300
+lifetime = 2.0
+preprocess = 1.0
+emission_shape = 1
+emission_sphere_radius = 35.0
+gravity = Vector2( 0, -98 )
+angular_velocity = 468.99
+angular_velocity_random = 1.0
+scale_amount = 10.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 35 )
+color_ramp = SubResource( 36 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.32549 )
+margin_left = 96.0
+margin_top = 116.0
+margin_right = 466.0
+margin_bottom = 348.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 102.0
+margin_top = 123.0
+margin_right = 460.0
+margin_bottom = 340.0
+
+[node name="CheatContainer" parent="ScrollContainer" instance=ExtResource( 6 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 268.0
+margin_bottom = 820.0
+
+[node name="Desc" type="Label" parent="."]
+modulate = Color( 0.968627, 1, 0.435294, 1 )
+margin_left = 40.0
+margin_top = 378.0
+margin_right = 356.0
+margin_bottom = 465.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 38 )
+text = "Description:"
+
+[node name="Dead" type="Label" parent="."]
+modulate = Color( 0.576471, 1, 0.572549, 1 )
+margin_left = 65.0
+margin_top = 43.0
+margin_right = 504.0
+margin_bottom = 63.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 39 )
+text = "Custom Game Modifiers"
+
+[node name="ESC" type="Node2D" parent="."]
+position = Vector2( 289, 98 )
+z_index = 1001
+
+[node name="Remarks" type="Label" parent="ESC"]
+margin_left = -140.0
+margin_top = -9.0
+margin_right = 150.0
+margin_bottom = 34.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 40 )
+text = "(Press ESC to return to menu)"

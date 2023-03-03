@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/ScoreBoard.gd" type="Script" id=1]
+[ext_resource path="res://sounds/Wallpaper.mp3" type="AudioStream" id=2]
+
+[node name="ScoreBoard" type="Node2D"]
+script = ExtResource( 1 )
+players = 4
+wincap = 15
+
+[node name="Muzak" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 5.0

@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/PublicPixel-z84yD.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/duck/pixil-frame-0.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Node2D
+
+export var destination = \"\"
+export var text = \"\"
+export var playmusic = false
+
+onready var Txt = $TextContainer/Text
+
+func _ready():
+	Txt.text = text
+
+func play_music():
+	ScoreBoard.play_music()
+
+func _on_ClickBox_mouse_entered():
+	$Click.play()
+	$Mations.play(\"popup\")
+
+
+func _on_ClickBox_mouse_exited():
+	$Mations.play_backwards(\"popup\")
+
+
+func _on_ClickBox_input_event(_viewport, event, _shape_idx):
+	if event is InputEventScreenTouch:
+		if event.is_pressed():
+			pass
+		elif !event.is_pressed():
+			ScoreBoard.reset_wins()
+			Transition.change_scene(destination)
+			$Bang.play()
+			if playmusic:
+				play_music()
+"
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 40, 43.7037 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 300, 740 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Test:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 300, -200 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 300, 740 ), Vector2( 300, 330 ), Vector2( 300, 350 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Test:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 300, -200 ), Vector2( 300, 170 ), Vector2( 300, 150 ) ]
+}
+
+[node name="ClickToPlay" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 600.0
+margin_bottom = 600.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="Test" type="Node2D" parent="."]
+position = Vector2( 300, -200 )
+
+[node name="Text" type="Label" parent="Test"]
+margin_left = -135.0
+margin_top = -31.0
+margin_right = 157.0
+margin_bottom = 12.0
+rect_scale = Vector2( 1, 1.5 )
+custom_fonts/font = SubResource( 1 )
+text = "Click the duck
+   to enter"
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300, 740 )
+script = SubResource( 4 )
+destination = "res://scenes/Titlescreen.tscn"
+playmusic = true
+
+[node name="Text" parent="Button/TextContainer" index="0"]
+text = ""
+
+[node name="Sprite" type="Sprite" parent="Button/TextContainer" index="1"]
+position = Vector2( -1.48148, 22.2222 )
+scale = Vector2( 2.59259, 2.96296 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="Button/ClickBox" index="0"]
+position = Vector2( -1.48148, -2.22223 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "intro"
+anims/RESET = SubResource( 2 )
+anims/intro = SubResource( 3 )
+
+[editable path="Button"]
