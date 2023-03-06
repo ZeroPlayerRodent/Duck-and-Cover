@@ -363,7 +363,7 @@ to Retry"
 
 [node name="Muzak" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = 3.0
+volume_db = 15.0
 autoplay = true
 
 [node name="ESC" type="Node2D" parent="."]

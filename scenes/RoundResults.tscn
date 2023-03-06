@@ -360,5 +360,5 @@ text = "Playing to
 
 [node name="Muzak" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = 3.0
+volume_db = 15.0
 autoplay = true
