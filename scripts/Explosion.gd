@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var modifier = get_parent().modifier.duplicate()
+onready var modifier = get_parent().modifier
 onready var Particlez = $Parts/Particles
 onready var Radius = $Area2D
 
@@ -16,7 +16,6 @@ func _ready():
 		scale /= 1.6
 	if modifier.has("big_explosions"):
 		scale *= 1.6
-	modifier.clear()
 
 func _process(delta):
 	timer += delta

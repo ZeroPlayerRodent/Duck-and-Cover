@@ -300,15 +300,15 @@ margin_bottom = 348.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 102.0
-margin_top = 123.0
+margin_top = 119.0
 margin_right = 460.0
-margin_bottom = 340.0
+margin_bottom = 345.0
 
 [node name="CheatContainer" parent="ScrollContainer" instance=ExtResource( 6 )]
 margin_left = 0.0
 margin_top = 0.0
-margin_right = 268.0
-margin_bottom = 820.0
+margin_right = 259.0
+margin_bottom = 736.0
 
 [node name="Desc" type="Label" parent="."]
 modulate = Color( 0.968627, 1, 0.435294, 1 )

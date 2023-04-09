@@ -22,6 +22,8 @@ signal mods_gend
 func _ready():
 	randomize()
 	modifier = ScoreBoard.cheats
+	if modifier.has("chaos"):
+		modifier = ScoreBoard.chaos()
 	emit_signal("mods_gend")
 	
 	if modifier.has("wrap_around"):

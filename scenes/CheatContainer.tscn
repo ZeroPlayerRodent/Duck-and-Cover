@@ -11,24 +11,24 @@ font_data = ExtResource( 2 )
 [node name="CheatContainer" type="VBoxContainer"]
 margin_left = 166.0
 margin_top = 69.0
-margin_right = 354.0
-margin_bottom = 124.0
+margin_right = 425.0
+margin_bottom = 838.0
 custom_constants/separation = 20
 alignment = 1
 
 [node name="LG" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 0.0
-margin_right = 268.0
-margin_bottom = 22.0
+margin_top = 16.0
+margin_right = 259.0
+margin_bottom = 32.0
 custom_fonts/font = SubResource( 1 )
 text = "Low Gravity"
 
 [node name="HG" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 42.0
-margin_right = 268.0
-margin_bottom = 64.0
+margin_top = 52.0
+margin_right = 259.0
+margin_bottom = 68.0
 custom_fonts/font = SubResource( 1 )
 text = "High Gravity"
 cheat = "high_gravity"
@@ -38,9 +38,9 @@ Heightens all player's gravity."
 
 [node name="LS" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 84.0
-margin_right = 268.0
-margin_bottom = 106.0
+margin_top = 88.0
+margin_right = 259.0
+margin_bottom = 104.0
 custom_fonts/font = SubResource( 1 )
 text = "Low Speed"
 cheat = "low_speed"
@@ -51,9 +51,9 @@ movement speed."
 
 [node name="HS" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 126.0
-margin_right = 268.0
-margin_bottom = 148.0
+margin_top = 124.0
+margin_right = 259.0
+margin_bottom = 140.0
 custom_fonts/font = SubResource( 1 )
 text = "High Speed"
 cheat = "high_speed"
@@ -64,9 +64,9 @@ movement speed."
 
 [node name="BE" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 168.0
-margin_right = 268.0
-margin_bottom = 190.0
+margin_top = 160.0
+margin_right = 259.0
+margin_bottom = 176.0
 custom_fonts/font = SubResource( 1 )
 text = "Big Explosions"
 cheat = "big_explosions"
@@ -77,9 +77,9 @@ radius SUPER HUGE!!!"
 
 [node name="TE" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 210.0
-margin_right = 268.0
-margin_bottom = 232.0
+margin_top = 196.0
+margin_right = 259.0
+margin_bottom = 212.0
 custom_fonts/font = SubResource( 1 )
 text = "Tiny Explosions"
 cheat = "tiny_explosions"
@@ -90,9 +90,9 @@ radius PATHETICALLY SMALL!!!"
 
 [node name="BBM" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 252.0
-margin_right = 268.0
-margin_bottom = 274.0
+margin_top = 232.0
+margin_right = 259.0
+margin_bottom = 248.0
 custom_fonts/font = SubResource( 1 )
 text = "Big Bird Mode"
 cheat = "big_mode"
@@ -103,9 +103,9 @@ Makes all players FAT and HUGE
 
 [node name="TBM" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 294.0
-margin_right = 268.0
-margin_bottom = 316.0
+margin_top = 268.0
+margin_right = 259.0
+margin_bottom = 284.0
 custom_fonts/font = SubResource( 1 )
 text = "Tiny Bird Mode"
 cheat = "tiny_mode"
@@ -116,9 +116,9 @@ Makes all players TEENY TINY
 
 [node name="BR" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 336.0
-margin_right = 268.0
-margin_bottom = 358.0
+margin_top = 304.0
+margin_right = 259.0
+margin_bottom = 320.0
 custom_fonts/font = SubResource( 1 )
 text = "Extra Rockets"
 cheat = "double_rockets"
@@ -128,9 +128,9 @@ More rockets will fall from the sky!"
 
 [node name="PR" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 378.0
-margin_right = 268.0
-margin_bottom = 400.0
+margin_top = 340.0
+margin_right = 259.0
+margin_bottom = 356.0
 custom_fonts/font = SubResource( 1 )
 text = "Pierce Rockets"
 cheat = "no_air_explosions"
@@ -141,9 +141,9 @@ without exploding."
 
 [node name="BOR" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 420.0
-margin_right = 268.0
-margin_bottom = 442.0
+margin_top = 376.0
+margin_right = 259.0
+margin_bottom = 392.0
 custom_fonts/font = SubResource( 1 )
 text = "Big Rockets"
 cheat = "big_rockets"
@@ -153,9 +153,9 @@ Makes all rockets HUUUUGEEE!!!"
 
 [node name="TOR" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 462.0
-margin_right = 268.0
-margin_bottom = 484.0
+margin_top = 412.0
+margin_right = 259.0
+margin_bottom = 428.0
 custom_fonts/font = SubResource( 1 )
 text = "Tiny Rockets"
 cheat = "tiny_rockets"
@@ -165,9 +165,9 @@ Makes all rockets teensy and tiny."
 
 [node name="SR" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 504.0
-margin_right = 268.0
-margin_bottom = 526.0
+margin_top = 448.0
+margin_right = 259.0
+margin_bottom = 464.0
 custom_fonts/font = SubResource( 1 )
 text = "Stealth Rockets"
 cheat = "stealth_rockets"
@@ -177,9 +177,9 @@ Gets rid of rocket warning arrows!"
 
 [node name="FR" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 546.0
-margin_right = 268.0
-margin_bottom = 568.0
+margin_top = 484.0
+margin_right = 259.0
+margin_bottom = 500.0
 custom_fonts/font = SubResource( 1 )
 text = "Fragile Rockets"
 cheat = "fragile_rockets"
@@ -190,9 +190,9 @@ collide with each other!"
 
 [node name="RG" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 588.0
-margin_right = 268.0
-margin_bottom = 610.0
+margin_top = 520.0
+margin_right = 259.0
+margin_bottom = 536.0
 custom_fonts/font = SubResource( 1 )
 text = "Australian Mode"
 cheat = "reverse_gravity"
@@ -203,9 +203,9 @@ G'day mate!"
 
 [node name="WA" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 630.0
-margin_right = 268.0
-margin_bottom = 652.0
+margin_top = 556.0
+margin_right = 259.0
+margin_bottom = 572.0
 custom_fonts/font = SubResource( 1 )
 text = "Walled In"
 cheat = "wrap_around"
@@ -216,9 +216,9 @@ player movement!"
 
 [node name="GS" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 672.0
-margin_right = 268.0
-margin_bottom = 694.0
+margin_top = 592.0
+margin_right = 259.0
+margin_bottom = 608.0
 custom_fonts/font = SubResource( 1 )
 text = "Gravity Shift"
 cheat = "gravity_shift"
@@ -229,9 +229,9 @@ players will shift gravity!"
 
 [node name="RC" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 714.0
-margin_right = 268.0
-margin_bottom = 736.0
+margin_top = 628.0
+margin_right = 259.0
+margin_bottom = 644.0
 custom_fonts/font = SubResource( 1 )
 text = "Reverse Controls"
 cheat = "reverse_controls"
@@ -242,9 +242,9 @@ controls!"
 
 [node name="F" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 756.0
-margin_right = 268.0
-margin_bottom = 778.0
+margin_top = 664.0
+margin_right = 259.0
+margin_bottom = 680.0
 custom_fonts/font = SubResource( 1 )
 text = "Flightless"
 cheat = "flightless"
@@ -256,12 +256,25 @@ their wings.
 
 [node name="P" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 798.0
-margin_right = 268.0
-margin_bottom = 820.0
+margin_top = 700.0
+margin_right = 259.0
+margin_bottom = 716.0
 text = "Phantom"
 cheat = "phantom"
 desc = "Description:
 
 Players can phase through each other!
 OoOoOoOoOo! Spooky!"
+
+[node name="CH" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 736.0
+margin_right = 259.0
+margin_bottom = 752.0
+text = "CHAOS MODE"
+cheat = "chaos"
+desc = "Description:
+
+Generates a custom gamemode
+using random modifiers 
+every match!"
